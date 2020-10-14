@@ -1,4 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import "typeface-montserrat";
 
 const breakpointValues = {
   xs: 0,

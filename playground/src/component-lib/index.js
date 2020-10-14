@@ -1,6 +1,7 @@
 /* eslint-disable */
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { createMuiTheme } from '@material-ui/core/styles';
+import 'typeface-montserrat';
 import React from 'react';
 import { rgba } from 'polished';
 import { makeStyles, Button as Button$1, Typography as Typography$1 } from '@material-ui/core';
