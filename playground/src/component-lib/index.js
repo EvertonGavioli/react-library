@@ -170,7 +170,7 @@ var StyledButton = styled(Button$1)(templateObject_3 || (templateObject_3 = __ma
 var templateObject_1$1, templateObject_2, templateObject_3;
 
 var Button = function (_a) {
-    var bgcolor = _a.bgcolor, disabled = _a.disabled, isSecondary = _a.isSecondary, onClick = _a.onClick, children = _a.children;
+    var _b = _a.bgcolor, bgcolor = _b === void 0 ? "#e0e0e0" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, _d = _a.isSecondary, isSecondary = _d === void 0 ? false : _d, onClick = _a.onClick, children = _a.children;
     var classes = useStyles();
     return (React.createElement(StyledButton, { color: "primary", bgcolor: bgcolor, disabled: disabled, isSecondary: isSecondary, onClick: onClick, variant: isSecondary ? "outlined" : "contained", classes: {
             contained: classes.contained,
@@ -179,11 +179,4 @@ var Button = function (_a) {
         } }, children));
 };
 
-var StyledMyComponent = styled.div(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  color: ", ";\n"], ["\n  color: ", ";\n"])), function (p) { return p.color || 'pink'; });
-var MyComponent = function (_a) {
-    var text = _a.text, color = _a.color;
-    return (React.createElement(StyledMyComponent, { color: color }, text));
-};
-var templateObject_1$2;
-
-export { Button, Global, MyComponent, device, theme };
+export { Button, Global, device, theme };

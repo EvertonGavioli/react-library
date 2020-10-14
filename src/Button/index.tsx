@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
 
 import { useStyles, StyledButton } from "./styles";
 
 interface ButtonProps {
-  bgcolor: string,
-  disabled: boolean,
-  isSecondary: boolean,
-  onClick: React.MouseEventHandler<HTMLButtonElement>,
+  bgcolor?: string;
+  disabled?: boolean;
+  isSecondary?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({bgcolor, disabled, isSecondary, onClick, children}) => {
+const Button: React.FC<ButtonProps> = ({
+  bgcolor = "#e0e0e0",
+  disabled = false,
+  isSecondary = false,
+  onClick,
+  children,
+}) => {
   const classes = useStyles();
 
   return (
@@ -29,6 +35,6 @@ const Button: React.FC<ButtonProps> = ({bgcolor, disabled, isSecondary, onClick,
       {children}
     </StyledButton>
   );
-}
+};
 
 export { ButtonProps, Button };
