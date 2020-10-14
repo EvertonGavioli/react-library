@@ -1,5 +1,18 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import "typeface-montserrat";
+
+declare module "@material-ui/core/styles/createPalette" {
+  export interface PaletteOptions {
+    custom: {
+      grey: {
+        dark: string;
+        main: string;
+        light: string;
+      };
+    };
+  }
+}
 
 const breakpointValues = {
   xs: 0,
@@ -11,6 +24,14 @@ const breakpointValues = {
 
 export const theme = createMuiTheme({
   palette: {
+    custom: {
+      grey: {
+        dark: "#1c130e",
+        main: "#413d3d",
+        light: "#c1c2c3",
+      },
+    },
+
     primary: {
       dark: "#b3040d",
       main: "#eb202b",
@@ -33,12 +54,6 @@ export const theme = createMuiTheme({
       dark: "#194b80",
       main: "#086ed8",
       light: "#4ba3ff",
-    },
-
-    grey: {
-      // dark: "#1c130e",
-      // main: "#413d3d",
-      // light: "#c1c2c3",
     },
 
     background: {
