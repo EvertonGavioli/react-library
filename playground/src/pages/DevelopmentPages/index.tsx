@@ -1,14 +1,17 @@
 import React from "react";
+import { useTheme } from "@material-ui/core";
 
 import { Button, Typography } from "../../component-lib";
 
 import { Container, Content } from "./styles";
 
 const DevelopmentPages: React.FC = () => {
+  const theme = useTheme();
+
   return (
     <Container>
       <Content>
-        <Button bgcolor={"#7159c1"}>Texto</Button>
+        <Button bgcolor={theme.palette.primary.main}>Texto</Button>
         <Button disabled bgcolor={"#7159c1"}>
           Texto
         </Button>
