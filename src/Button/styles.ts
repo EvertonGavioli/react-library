@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
 }));
 
 interface StyledButtonProps {
-  isSecondary: boolean;
+  issecondary?: boolean;
   bgcolor: string;
 }
 
@@ -34,7 +34,7 @@ export const StyledButton = styled(Button)<StyledButtonProps>`
   border-radius: 100px;
 
   ${(props) =>
-    props.isSecondary
+    props.issecondary
       ? css`
           color: ${props.bgcolor};
           border: 2px solid ${rgba(props.bgcolor, 0.5)};

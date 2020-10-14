@@ -164,7 +164,7 @@ var useStyles = makeStyles(function (theme) { return ({
 }); });
 var StyledButton = styled(Button$1)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  min-height: 56px;\n  min-width: 136px;\n\n  font-size: 20px;\n  font-weight: 800;\n  text-transform: none;\n  border-radius: 100px;\n\n  ", "\n\n  @media ", " {\n    min-width: 200px;\n  }\n"], ["\n  min-height: 56px;\n  min-width: 136px;\n\n  font-size: 20px;\n  font-weight: 800;\n  text-transform: none;\n  border-radius: 100px;\n\n  ",
     "\n\n  @media ", " {\n    min-width: 200px;\n  }\n"])), function (props) {
-    return props.isSecondary
+    return props.issecondary
         ? css(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n          color: ", ";\n          border: 2px solid ", ";\n          box-shadow: 0px 5px 15px 0px ", ";\n\n          &:hover {\n            border: 2px solid ", ";\n            box-shadow: 0px 5px 15px 0px ", ";\n          }\n        "], ["\n          color: ", ";\n          border: 2px solid ", ";\n          box-shadow: 0px 5px 15px 0px ", ";\n\n          &:hover {\n            border: 2px solid ", ";\n            box-shadow: 0px 5px 15px 0px ", ";\n          }\n        "])), props.bgcolor, rgba(props.bgcolor, 0.5), rgba(props.bgcolor, 0.15), rgba(props.bgcolor, 0.5), rgba(props.bgcolor, 0.5)) : css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n          box-shadow: 0px 5px 15px 0px ", ";\n          background-color: ", ";\n\n          &:hover {\n            background-color: ", ";\n            box-shadow: 0px 5px 15px 0px ", ";\n          }\n        "], ["\n          box-shadow: 0px 5px 15px 0px ", ";\n          background-color: ", ";\n\n          &:hover {\n            background-color: ", ";\n            box-shadow: 0px 5px 15px 0px ", ";\n          }\n        "])), rgba(props.bgcolor, 0.35), props.bgcolor, props.bgcolor, rgba(props.bgcolor, 0.75));
 }, device.sm);
 var templateObject_1$1, templateObject_2, templateObject_3;
@@ -172,7 +172,7 @@ var templateObject_1$1, templateObject_2, templateObject_3;
 var Button = function (_a) {
     var _b = _a.bgcolor, bgcolor = _b === void 0 ? "#e0e0e0" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, _d = _a.isSecondary, isSecondary = _d === void 0 ? false : _d, onClick = _a.onClick, children = _a.children;
     var classes = useStyles();
-    return (React.createElement(StyledButton, { color: "primary", bgcolor: bgcolor, disabled: disabled, isSecondary: isSecondary, onClick: onClick, variant: isSecondary ? "outlined" : "contained", classes: {
+    return (React.createElement(StyledButton, { color: "primary", bgcolor: bgcolor, disabled: disabled, issecondary: isSecondary ? true : undefined, onClick: onClick, variant: isSecondary ? "outlined" : "contained", classes: {
             contained: classes.contained,
             disabled: classes.disabled,
             outlined: classes.outlined,
