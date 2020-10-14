@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  Button,
-  theme as DefaultTheme,
-  Global as GlobalStyles,
-} from "./component-lib";
-
 import { StylesProvider, ThemeProvider } from "@material-ui/core";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
+
+import { theme as DefaultTheme, Global as GlobalStyles } from "./component-lib";
+
+import DevelopmentPage from "./pages/DevelopmentPages";
 
 const App: React.FC = () => {
   return (
@@ -14,9 +12,7 @@ const App: React.FC = () => {
       <StyledThemeProvider theme={DefaultTheme}>
         <ThemeProvider theme={DefaultTheme}>
           <GlobalStyles />
-          <Button bgcolor="#7159c1" onClick={() => console.log("Click!")}>
-            Texto
-          </Button>
+          <DevelopmentPage />
         </ThemeProvider>
       </StyledThemeProvider>
     </StylesProvider>

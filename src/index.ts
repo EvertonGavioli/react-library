@@ -3,5 +3,6 @@ import { theme } from "./Styles/DefaultTheme";
 import { device } from "./Styles/MediaQueries";
 
 import { Button } from "./Button";
+import { Typography } from "./Typography";
 
-export { Button, Global, theme, device };
+export { Global, theme, device, Button, Typography };

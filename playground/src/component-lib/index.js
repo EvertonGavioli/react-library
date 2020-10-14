@@ -3,7 +3,7 @@ import styled, { createGlobalStyle, css } from 'styled-components';
 import { createMuiTheme } from '@material-ui/core/styles';
 import React from 'react';
 import { rgba } from 'polished';
-import { makeStyles, Button as Button$1 } from '@material-ui/core';
+import { makeStyles, Button as Button$1, Typography as Typography$1 } from '@material-ui/core';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -179,4 +179,34 @@ var Button = function (_a) {
         } }, children));
 };
 
-export { Button, Global, device, theme };
+var StyledTypography = styled(Typography$1)(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  font-weight: ", ";\n"], ["\n  font-weight: ", ";\n"])), function (props) { return props.fontWeight; });
+var templateObject_1$2;
+
+var returnFontWeight = function (value) {
+    switch (value) {
+        case "ultra-light":
+            return 200;
+        case "light":
+            return 300;
+        case "medium":
+            return 400;
+        case "regular":
+            return 500;
+        case "semi-bold":
+            return 600;
+        case "bold":
+            return 700;
+        case "extra-bold":
+            return 800;
+        case "black":
+            return 900;
+        default:
+            return undefined;
+    }
+};
+var Typography = function (_a) {
+    var _b = _a.variant, variant = _b === void 0 ? "body1" : _b, weight = _a.weight, children = _a.children;
+    return (React.createElement(StyledTypography, { variant: variant, fontWeight: returnFontWeight(weight) }, children));
+};
+
+export { Button, Global, Typography, device, theme };
