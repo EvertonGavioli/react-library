@@ -1,7 +1,5 @@
 import React from 'react';
-
-import IconMais from '../Icons/iconMais.svg';
-
+import { IconMais } from '../Icons';
 import { StyledButtonAdd, ContentWrapper } from './styles';
 
 interface ButtonAddProps {
@@ -13,7 +11,7 @@ const ButtonAdd: React.FC<ButtonAddProps> = ({ children, bgColor = '#ff4850', on
   return (
     <StyledButtonAdd variant="outlined" bgcolor={bgColor} onClick={onClick}>
       <ContentWrapper>
-        <IconMais />
+        <IconMais style={{ fontSize: 24 }} />
         {children}
       </ContentWrapper>
     </StyledButtonAdd>
