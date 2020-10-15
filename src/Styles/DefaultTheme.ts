@@ -62,7 +62,7 @@ export const theme = createMuiTheme({
 
     text: {
       primary: '#413d3d',
-      secondary: '#fff',
+      secondary: '#c1c2c3',
       disabled: '#fff',
     },
 

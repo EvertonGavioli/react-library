@@ -18,7 +18,7 @@ export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: boole
   background-color: ${(props) => props.theme.palette.background.default};
 
   &:hover {
-    color: ${(props) => props.theme.palette.text.secondary};
+    color: #fff;
     background-color: ${(props) => props.bgcolor};
     box-shadow: 0px 5px 15px 0px ${(props) => rgba(props.bgcolor, 0.5)};
   }
