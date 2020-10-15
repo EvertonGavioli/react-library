@@ -28,7 +28,7 @@ export const StyledButton = styled(Button)<StyledButtonProps>`
   min-height: 56px;
   min-width: 136px;
 
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 800;
   text-transform: none;
   border-radius: 100px;

@@ -61,6 +61,8 @@ export const theme = createMuiTheme({
     },
 
     text: {
+      primary: '#413d3d',
+      secondary: '#fff',
       disabled: '#fff',
     },
 
