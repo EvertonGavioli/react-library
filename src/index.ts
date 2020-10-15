@@ -3,6 +3,7 @@ import { theme } from './Styles/DefaultTheme';
 import { device } from './Styles/MediaQueries';
 
 import { Button } from './Button';
+import { ButtonAdd } from './ButtonAdd';
 import { Typography } from './Typography';
 
-export { Global, theme, device, Button, Typography };
+export { Global, theme, device, Button, ButtonAdd, Typography };

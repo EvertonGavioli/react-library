@@ -1,5 +1,7 @@
 import React from 'react';
 
+// import IconMais from '../Icons/iconMais.svg';
+
 import { StyledButtonAdd, ContentWrapper } from './styles';
 
 interface ButtonAddProps {
