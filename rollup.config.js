@@ -12,6 +12,6 @@ export default [
       { file: pkg.module, format: 'esm' },
     ],
     plugins: [del({ targets: ['dist/*'] }), typescript(), autoExternal(), svgr()],
-    external: ['@material-ui/core/styles'],
+    external: ['@material-ui/core/styles', '@material-ui/core/SvgIcon'],
   },
 ];

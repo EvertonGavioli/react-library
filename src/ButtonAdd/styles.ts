@@ -7,7 +7,7 @@ export const StyledButtonAdd = styled(Button)<{ bgcolor: string }>`
   min-width: 100%;
 
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: none;
   border-radius: 5px;
   border-color: ${(props) => props.bgcolor};
