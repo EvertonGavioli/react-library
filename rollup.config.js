@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
-import autoExternal from 'rollup-plugin-auto-external';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
 import pkg from './package.json';
 import svgr from '@svgr/rollup';
@@ -11,7 +11,6 @@ export default [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'esm' },
     ],
-    plugins: [del({ targets: ['dist/*'] }), typescript(), autoExternal(), svgr()],
-    external: ['@material-ui/core/styles', '@material-ui/core/SvgIcon'],
+    plugins: [del({ targets: ['dist/*'] }), typescript(), peerDepsExternal(), svgr()],
   },
 ];
