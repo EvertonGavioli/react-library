@@ -1,15 +1,19 @@
 import React from 'react';
 
 import { IconButton, InputAdornment } from '@material-ui/core';
-import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
+
+import { AddIcon, SearchIcon, VisibilityOutlinedIcon } from '../Icons';
 
 import { useStyles, StyledTextField } from './styles';
+
+type IconType = 'AddIcon' | 'SearchIcon' | 'VisibilityOutlinedIcon';
 
 interface TextFieldProps {
   autoFocus?: boolean;
   fullWidth?: boolean;
   label?: string;
   placeholder?: string;
+  icon?: IconType;
   value?: unknown;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
 }
@@ -20,18 +24,33 @@ const TextField: React.FC<TextFieldProps> = ({
   label,
   placeholder,
   value,
+  icon,
   onChange,
 }) => {
   const myClasses = useStyles();
 
+  const renderIcon = () => {
+    switch (icon) {
+      case 'AddIcon':
+        return <AddIcon color="primary" />;
+      case 'SearchIcon':
+        return <SearchIcon color="primary" />;
+      case 'VisibilityOutlinedIcon':
+        return <VisibilityOutlinedIcon color="primary" />;
+      default:
+        return undefined;
+    }
+  };
+
   const renderAdornment = () => {
-    return (
-      <InputAdornment position="end">
-        <IconButton>
-          <VisibilityOutlinedIcon />
-        </IconButton>
-      </InputAdornment>
-    );
+    if (icon) {
+      return (
+        <InputAdornment position="end">
+          <IconButton size="small">{renderIcon()}</IconButton>
+        </InputAdornment>
+      );
+    }
+    return undefined;
   };
 
   return (

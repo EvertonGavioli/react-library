@@ -1,6 +1,5 @@
 import React from 'react';
-import { IconMais } from '../Icons';
-
+import { AddIcon } from '../Icons';
 import { StyledButtonAdd, ContentWrapper, LabelWrapper } from './styles';
 
 interface ButtonAddProps {
@@ -18,7 +17,7 @@ const ButtonAdd: React.FC<ButtonAddProps> = ({
   return (
     <StyledButtonAdd variant="outlined" bgcolor={bgColor} issquare={isSquare} onClick={onClick}>
       <ContentWrapper issquare={isSquare}>
-        <IconMais style={{ fontSize: 24 }} />
+        <AddIcon />
         <LabelWrapper issquare={isSquare}>{children}</LabelWrapper>
       </ContentWrapper>
     </StyledButtonAdd>

@@ -20,3 +20,10 @@ Default.args = {
   label: 'Label',
   placeholder: 'Digite aqui',
 };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: 'Label',
+  placeholder: 'Digite aqui',
+  icon: 'VisibilityOutlinedIcon',
+};
