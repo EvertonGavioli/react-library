@@ -1,14 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Button } from '@material-ui/core';
 import { rgba } from 'polished';
 
-export const StyledButtonAdd = styled(Button)<{ bgcolor: string }>`
+export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: boolean }>`
   min-height: 56px;
   min-width: 100%;
 
   font-size: 1rem;
   font-weight: 500;
   text-transform: none;
+  align-items: center;
   justify-content: left;
   border-radius: 5px;
   border-color: ${(props) => props.bgcolor};
@@ -21,13 +22,24 @@ export const StyledButtonAdd = styled(Button)<{ bgcolor: string }>`
     background-color: ${(props) => props.bgcolor};
     box-shadow: 0px 5px 15px 0px ${(props) => rgba(props.bgcolor, 0.5)};
   }
+
+  ${(props) =>
+    props.issquare &&
+    css`
+      min-width: 104px;
+      max-width: 104px;
+      height: 104px;
+      font-size: 0.75rem;
+      justify-content: center;
+    `}
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{ issquare: boolean }>`
   display: flex;
+  flex-direction: ${(props) => (props.issquare ? 'column' : 'row')};
   align-items: center;
 `;
 
-export const LabelWrapper = styled.div`
-  padding-left: 8px;
+export const LabelWrapper = styled.div<{ issquare: boolean }>`
+  padding-left: ${(props) => (props.issquare ? '0px' : '8px')};
 `;

@@ -5,15 +5,21 @@ import { StyledButtonAdd, ContentWrapper, LabelWrapper } from './styles';
 
 interface ButtonAddProps {
   bgColor?: string;
+  isSquare?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const ButtonAdd: React.FC<ButtonAddProps> = ({ children, bgColor = '#ff4850', onClick }) => {
+const ButtonAdd: React.FC<ButtonAddProps> = ({
+  children,
+  bgColor = '#ff4850',
+  isSquare = false,
+  onClick,
+}) => {
   return (
-    <StyledButtonAdd variant="outlined" bgcolor={bgColor} onClick={onClick}>
-      <ContentWrapper>
+    <StyledButtonAdd variant="outlined" bgcolor={bgColor} issquare={isSquare} onClick={onClick}>
+      <ContentWrapper issquare={isSquare}>
         <IconMais style={{ fontSize: 24 }} />
-        <LabelWrapper>{children}</LabelWrapper>
+        <LabelWrapper issquare={isSquare}>{children}</LabelWrapper>
       </ContentWrapper>
     </StyledButtonAdd>
   );

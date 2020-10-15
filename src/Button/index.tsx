@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  bgcolor = '#e0e0e0',
+  bgcolor = '#ff4850',
   disabled = false,
   isSecondary = false,
   onClick,
