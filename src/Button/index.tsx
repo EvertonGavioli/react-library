@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { useStyles, StyledButton } from "./styles";
+import { useStyles, StyledButton } from './styles';
 
 interface ButtonProps {
   bgcolor?: string;
@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  bgcolor = "#e0e0e0",
+  bgcolor = '#e0e0e0',
   disabled = false,
   isSecondary = false,
   onClick,
@@ -23,9 +23,9 @@ const Button: React.FC<ButtonProps> = ({
       color="primary"
       bgcolor={bgcolor}
       disabled={disabled}
-      issecondary={isSecondary ? "true" : "false"}
+      issecondary={isSecondary ? 'true' : 'false'}
       onClick={onClick}
-      variant={isSecondary ? "outlined" : "contained"}
+      variant={isSecondary ? 'outlined' : 'contained'}
       classes={{
         contained: classes.contained,
         disabled: classes.disabled,

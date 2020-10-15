@@ -1,19 +1,19 @@
-import styled, { css } from "styled-components";
-import { rgba } from "polished";
-import { device } from "../Styles/MediaQueries";
+import styled, { css } from 'styled-components';
+import { rgba } from 'polished';
+import { device } from '../Styles/MediaQueries';
 
-import { makeStyles, Button } from "@material-ui/core";
+import { makeStyles, Button } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
   contained: {
-    "&$disabled": {
-      color: "#fff",
+    '&$disabled': {
+      color: '#fff',
     },
   },
   outlined: {
-    "&$disabled": {
-      borderWidth: "2px",
-      boxShadow: "none",
+    '&$disabled': {
+      borderWidth: '2px',
+      boxShadow: 'none',
     },
   },
   disabled: {},
@@ -34,7 +34,7 @@ export const StyledButton = styled(Button)<StyledButtonProps>`
   border-radius: 100px;
 
   ${(props) =>
-    props.issecondary === "true"
+    props.issecondary === 'true'
       ? css`
           color: ${props.bgcolor};
           border: 2px solid ${rgba(props.bgcolor, 0.5)};
