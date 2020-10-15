@@ -27,3 +27,11 @@ WithIcon.args = {
   placeholder: 'Digite aqui',
   icon: 'VisibilityOutlinedIcon',
 };
+
+export const WithHelperText = Template.bind({});
+WithHelperText.args = {
+  label: 'Label',
+  placeholder: 'Digite aqui',
+  icon: 'AddIcon',
+  helperText: 'para adicionar outro item clique no ícone',
+};

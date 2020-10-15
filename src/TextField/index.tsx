@@ -14,6 +14,7 @@ interface TextFieldProps {
   label?: string;
   placeholder?: string;
   icon?: IconType;
+  helperText?: string;
   value?: unknown;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
 }
@@ -25,6 +26,7 @@ const TextField: React.FC<TextFieldProps> = ({
   placeholder,
   value,
   icon,
+  helperText,
   onChange,
 }) => {
   const myClasses = useStyles();
@@ -59,6 +61,7 @@ const TextField: React.FC<TextFieldProps> = ({
       fullWidth={fullWidth}
       label={label}
       placeholder={placeholder}
+      helperText={helperText}
       value={value}
       onChange={onChange}
       InputLabelProps={{ classes: { root: myClasses.labelRoot, focused: myClasses.focused } }}
