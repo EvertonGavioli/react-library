@@ -35,3 +35,11 @@ WithHelperText.args = {
   icon: 'AddIcon',
   helperText: 'para adicionar outro item clique no ícone',
 };
+
+export const WithError = Template.bind({});
+WithError.args = {
+  label: 'Label',
+  placeholder: 'Digite aqui',
+  error: true,
+  helperText: 'Mensagem de erro',
+};

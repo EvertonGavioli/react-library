@@ -15,8 +15,10 @@ interface TextFieldProps {
   placeholder?: string;
   icon?: IconType;
   helperText?: string;
+  error?: boolean;
   value?: unknown;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  onIconClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -27,7 +29,9 @@ const TextField: React.FC<TextFieldProps> = ({
   value,
   icon,
   helperText,
+  error,
   onChange,
+  onIconClick,
 }) => {
   const myClasses = useStyles();
 
@@ -48,7 +52,9 @@ const TextField: React.FC<TextFieldProps> = ({
     if (icon) {
       return (
         <InputAdornment position="end">
-          <IconButton size="small">{renderIcon()}</IconButton>
+          <IconButton size="small" onClick={onIconClick}>
+            {renderIcon()}
+          </IconButton>
         </InputAdornment>
       );
     }
@@ -62,6 +68,7 @@ const TextField: React.FC<TextFieldProps> = ({
       label={label}
       placeholder={placeholder}
       helperText={helperText}
+      error={error}
       value={value}
       onChange={onChange}
       InputLabelProps={{ classes: { root: myClasses.labelRoot, focused: myClasses.focused } }}
@@ -69,6 +76,7 @@ const TextField: React.FC<TextFieldProps> = ({
         classes: { underline: myClasses.underline },
         endAdornment: renderAdornment(),
       }}
+      FormHelperTextProps={{ classes: { root: myClasses.helperTextRoot, error: myClasses.error } }}
     />
   );
 };

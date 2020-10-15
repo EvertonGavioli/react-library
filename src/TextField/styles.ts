@@ -22,6 +22,12 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
+  helperTextRoot: {
+    '&$error': {
+      textAlign: 'right',
+    },
+  },
+
   disabled: {},
   focused: {},
   error: {},
