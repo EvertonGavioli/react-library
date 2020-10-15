@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { IconButton, InputAdornment } from '@material-ui/core';
+import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
+
 import { useStyles, StyledTextField } from './styles';
 
 interface TextFieldProps {
@@ -21,6 +24,16 @@ const TextField: React.FC<TextFieldProps> = ({
 }) => {
   const myClasses = useStyles();
 
+  const renderAdornment = () => {
+    return (
+      <InputAdornment position="end">
+        <IconButton>
+          <VisibilityOutlinedIcon />
+        </IconButton>
+      </InputAdornment>
+    );
+  };
+
   return (
     <StyledTextField
       autoFocus={autoFocus}
@@ -30,7 +43,10 @@ const TextField: React.FC<TextFieldProps> = ({
       value={value}
       onChange={onChange}
       InputLabelProps={{ classes: { root: myClasses.labelRoot, focused: myClasses.focused } }}
-      InputProps={{ classes: { underline: myClasses.underline } }}
+      InputProps={{
+        classes: { underline: myClasses.underline },
+        endAdornment: renderAdornment(),
+      }}
     />
   );
 };
