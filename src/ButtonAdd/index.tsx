@@ -15,10 +15,15 @@ const ButtonAdd: React.FC<ButtonAddProps> = ({
   onClick,
 }) => {
   return (
-    <StyledButtonAdd variant="outlined" bgcolor={bgColor} issquare={isSquare} onClick={onClick}>
-      <ContentWrapper issquare={isSquare}>
+    <StyledButtonAdd
+      variant="outlined"
+      bgcolor={bgColor}
+      issquare={isSquare ? 'true' : 'false'}
+      onClick={onClick}
+    >
+      <ContentWrapper issquare={isSquare ? 'true' : 'false'}>
         <AddIcon />
-        <LabelWrapper issquare={isSquare}>{children}</LabelWrapper>
+        <LabelWrapper issquare={isSquare ? 'true' : 'false'}>{children}</LabelWrapper>
       </ContentWrapper>
     </StyledButtonAdd>
   );

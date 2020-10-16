@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Button } from '@material-ui/core';
 import { rgba } from 'polished';
 
-export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: boolean }>`
+export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: string }>`
   min-height: 56px;
   min-width: 100%;
 
@@ -24,7 +24,7 @@ export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: boole
   }
 
   ${(props) =>
-    props.issquare &&
+    props.issquare === 'true' &&
     css`
       min-width: 104px;
       max-width: 104px;
@@ -34,12 +34,12 @@ export const StyledButtonAdd = styled(Button)<{ bgcolor: string; issquare: boole
     `}
 `;
 
-export const ContentWrapper = styled.div<{ issquare: boolean }>`
+export const ContentWrapper = styled.div<{ issquare: string }>`
   display: flex;
-  flex-direction: ${(props) => (props.issquare ? 'column' : 'row')};
+  flex-direction: ${(props) => (props.issquare === 'true' ? 'column' : 'row')};
   align-items: center;
 `;
 
-export const LabelWrapper = styled.div<{ issquare: boolean }>`
-  padding-left: ${(props) => (props.issquare ? '0px' : '8px')};
+export const LabelWrapper = styled.div<{ issquare: string }>`
+  padding-left: ${(props) => (props.issquare === 'true' ? '0px' : '8px')};
 `;
