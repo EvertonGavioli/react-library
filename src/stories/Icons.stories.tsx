@@ -6,12 +6,25 @@ export default {
   decorators: [withKnobs],
 };
 
-import { AddIcon, SearchIcon, VisibilityOutlinedIcon } from '../Icons';
+import {
+  AddIcon,
+  SearchIcon,
+  VisibilityOutlinedIcon,
+  IconPizzaria,
+  IconLanchonete,
+} from '../Icons';
 
 export const AllIcons = (args) => (
-  <div {...args}>
-    <AddIcon />
-    <SearchIcon />
-    <VisibilityOutlinedIcon />
-  </div>
+  <>
+    <div {...args}>
+      <AddIcon />
+      <SearchIcon />
+      <VisibilityOutlinedIcon />
+    </div>
+
+    <div>
+      <IconPizzaria style={{ fontSize: 72 }} />
+      <IconLanchonete style={{ fontSize: 72 }} />
+    </div>
+  </>
 );

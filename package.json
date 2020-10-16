@@ -5,11 +5,12 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "lint": "eslint . --ext .ts --ext .tsx",
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "assets": "npx @svgr/cli src/Assets --out-dir src/Assets/Components --typescript"
   },
   "repository": {
     "type": "git",
