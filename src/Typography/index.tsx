@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TypographyProps as MuiTypographyProps } from '@material-ui/core';
+
 import { StyledTypography } from './styles';
 
 type Variants = 'h4' | 'h5' | 'h6' | 'subtitle1' | 'body1' | 'body2' | 'caption';
@@ -36,15 +38,15 @@ const returnFontWeight = (value?: FontWeight) => {
   }
 };
 
-interface TypographyProps {
+interface TypographyProps extends MuiTypographyProps {
   variant?: Variants;
   weight?: FontWeight;
 }
 
-const Typography: React.FC<TypographyProps> = ({ variant = 'body1', weight, children }) => {
+const Typography: React.FC<TypographyProps> = ({ variant = 'body1', weight, ...props }) => {
   return (
-    <StyledTypography variant={variant} fontWeight={returnFontWeight(weight)}>
-      {children}
+    <StyledTypography {...props} variant={variant} fontWeight={returnFontWeight(weight)}>
+      {props.children}
     </StyledTypography>
   );
 };
