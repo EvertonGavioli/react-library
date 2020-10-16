@@ -1,5 +1,4 @@
 // Ícones Próprios
-export { default as IconMais } from './IconMais';
 export { default as IconPizzaria } from './IconPizzaria';
 
 // Ícones Material-ui

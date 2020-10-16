@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { SelectBox, SelectBoxProps } from '../SelectBox';
 
-import { IconPizzaria } from '../Icons';
+import IconPizzaria from '../Icons/IconPizzaria';
 
 export default {
   title: 'Components/SelectBox',
@@ -36,7 +36,7 @@ Selected.args = {
 
 export const WithIcon: Story<SelectBoxProps> = (args) => (
   <SelectBox {...args}>
-    <IconPizzaria style={{ color: '#eb202b' }} />
+    <IconPizzaria style={{ fontSize: 72 }} />
   </SelectBox>
 );
 WithIcon.args = {
