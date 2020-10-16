@@ -37,6 +37,7 @@ Selected.args = {
 export const WithIcon: Story<SelectBoxProps> = (args) => (
   <SelectBox {...args}>
     <IconPizzaria style={{ fontSize: 72 }} />
+    {/* <img src={'/Pizzaria.svg'} width="50px" height="50px" /> */}
   </SelectBox>
 );
 WithIcon.args = {
