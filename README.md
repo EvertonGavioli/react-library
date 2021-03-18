@@ -1,1 +1,1 @@
-# expresso-react-library
+# react-library
